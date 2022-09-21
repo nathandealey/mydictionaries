@@ -1,8 +1,12 @@
 # This program uses a dictionary as a deck of cards.
 
+from ast import Return
+
+
 def main():
     # Create a deck of cards.
-   
+
+   deck =  create_deck()
 
     # Get the number of cards to deal.
     num_cards = int(input('How many cards should I deal? '))
@@ -10,7 +14,7 @@ def main():
 
 
     # Deal the cards.
-
+    dealcards(deck, num_cards)
 
     
     
@@ -20,6 +24,7 @@ def main():
 def create_deck():
     # Create a dictionary with each card and its value
     # stored as key-value pairs.
+    ###### YOU CANNOT HAVE DUPLICATE KEYS, thats why there are the cards names for the keys instead of the number associated with it
     deck = {'Ace of Spades':1, '2 of Spades':2, '3 of Spades':3,
             '4 of Spades':4, '5 of Spades':5, '6 of Spades':6,
             '7 of Spades':7, '8 of Spades':8, '9 of Spades':9,
@@ -45,7 +50,7 @@ def create_deck():
             'Queen of Diamonds':10, 'King of Diamonds': 10}
 
     # Return the deck.
-
+return deck
 
 
 
@@ -54,24 +59,32 @@ def create_deck():
 
 def deal_cards(deck, number):
     # Initialize an accumulator for the hand value.
+    handvalue = 0
 
     
     
 
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck.
-
+    if number > 52:
+        number = 52
     
     
 
     # Deal the cards and accumulate their values.
-    
+    import random
+    for count in range(number):
+        card = random.choice(list(deck))
+        print(card)
+        value = deck[card]
+        handvalue += deck(card)
+
 
 
     
 
     # Display the value of the hand.
-
+    print('the value of the hand is:', value)
     
     
 

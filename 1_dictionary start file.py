@@ -4,8 +4,6 @@ phonebook = {'Chris':'555−1111',
              'Katie':'555−2222',
              'Joanne':'555−3333'}
 
-
-
 print()
 print('*****  start section 1 - print dictionary ********')
 print()
@@ -27,16 +25,11 @@ print()
 print('*****  end section 1 ********')
 print()
 
-
-
-
 print()
 print('*****  start section 2 - search dictionary ********')
 print()
 
-
 name = 'Chris'
-
 
 if name in phonebook:
     print(phonebook[name])
@@ -44,17 +37,9 @@ if name in phonebook:
 else:
     print(name, 'not in phonebook')
 
-
-
-
-
 print()
 print('*****  end section 2 ********')
 print()
-
-
-
-
 
 print()
 print('*****  start section 3 - edit/append dictionary ********')
@@ -65,12 +50,9 @@ phonebook['Chris'] = '555-0123'
 phonebook['Joe'] = '555-4444'
 print(phonebook)
 
-
 print()
 print('*****  end section 3 ********')
 print()
-
-
 
 print()
 print('*****  start section 4 - delete/remove from dictionary ********')
@@ -78,7 +60,6 @@ print()
 
 #del phonebook['Chris']
 #print(phonebook)
-
 
 print()
 print('*****  end section 4 ********')
@@ -120,7 +101,7 @@ print()
 phone = phonebook.get("Chris", "key not found")
 print(phone)
 
-#phonebook.clear()
+#phonebook.clear() #clears elements of the phonebook, it will still exist but the contents will be erased
 #print(phonebook)
 
 
@@ -128,53 +109,50 @@ print()
 print('*****  end section 6 ********')
 print()
 
-'''
+
 print()
 print('*****  start section 7 - using pop method ********')
 print()
 
+#a = phonebook.pop('Chris', 'not found')
 
+#print(a)
 
-
-
+#print(phonebook)
 
 print()
 print('*****  end section 7 ********')
 print()
 
-
-
 print()
 print('*****  start section 8 - using popitem ********')
 print()
 
-
-
-
-
+#print(phonebook)
+#a = phonebook.popitem()
+#print(a)
+#print(phonebook)
 
 print()
 print('*****  end section 8 ********')
 print()
 
-
-
 print()
 print('*****  start section 9 - using random and converting to list ********')
 print()
 
+listofkeys = list(phonebook)
+print(listofkeys)
 
+randomkey = random.choice(listofkeys)
+print(randomkey)
+randomvalue = phonebook[randomkey]
+print(randomvalue)
 
-
+#alternatively
+randomvalue = phonebook[random.choice(list(phonebook))]
+print(randomvalue)
 
 print()
 print('*****  end section 9 ********')
 print()
-
-
-'''
-
-
-
-
-
